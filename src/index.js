@@ -52,11 +52,11 @@ export const getFixedValue = (number, accuracy) => {
 export const getFlooroCeil = (number) => {
 
 if (number % 2 < 1){
-    Math.floor(number);
-    return number;
+    let even =  Math.floor(number);
+    return even;
 }else{
-    Math.ceil(number);
-    return number;
+    let notEven = Math.ceil(number);
+    return notEven;
 }
 
 };
