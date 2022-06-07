@@ -7,7 +7,13 @@
  * @param {number} maxSecond
  * @returns {number}
  */
-export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {};
+export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {
+
+    let minNumber = Math.min(minFirst,minSecond);
+    let maxNumber = Math.max(maxFirst,maxSecond);
+    let sumMultiply = minNumber * maxNumber;
+    return sumMultiply;
+};
 
 /**
  * Функция принимает один числовой аргумент, это радиус круга. Функция должна
@@ -16,7 +22,11 @@ export const minMaxMultiply = (minFirst, minSecond, maxFirst, maxSecond) => {};
  * @param {number} radius
  * @returns {number}
  */
-export const getSquareOfCircle = (radius) => {};
+export const getSquareOfCircle = (radius) => {
+
+    const square = Math.PI * Math.pow(radius,2);
+    return square;
+};
 
 /**
  * Функция принимает число и точность к которой нужно округлить
@@ -26,7 +36,12 @@ export const getSquareOfCircle = (radius) => {};
  * @param {number} accuracy
  * @returns {number}
  */
-export const getFixedValue = (number, accuracy) => {};
+export const getFixedValue = (number, accuracy) => {
+
+    const result = Math.round(number * Math.pow(10,accuracy)) / Math.pow(10,accuracy)  ;
+    return result;
+
+};
 
 /**
  * Если целая часть числа четная, то срабатывает Math.floor для этого числа
@@ -34,7 +49,17 @@ export const getFixedValue = (number, accuracy) => {};
  * @param {number} number
  * @returns {number}
  */
-export const getFlooroCeil = (number) => {};
+export const getFlooroCeil = (number) => {
+
+if (number % 2 < 1){
+    Math.floor(number);
+    return number;
+}else{
+    Math.ceil(number);
+    return number;
+}
+
+};
 
 /**
  * Мы передаем два числа, от какого и до какого числа и функция должна
@@ -44,4 +69,11 @@ export const getFlooroCeil = (number) => {};
  * @param {number} to
  * @returns {number}
  */
-export const randomizer = (from, to) => {};
+export const randomizer = (from, to) => {
+
+    Math.round(from);
+    Math.round(to);
+    const result =   from + (Math.floor((to - from) * Math.random()));
+    return  result;
+
+};
