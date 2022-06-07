@@ -73,7 +73,7 @@ export const randomizer = (from, to) => {
 
     Math.round(from);
     Math.round(to);
-    const result =   from + (Math.floor((to - from) * Math.random()));
+    const result =   from + (Math.round((to - from) * Math.random()));
     return  result;
 
 };
